@@ -2,6 +2,7 @@ $c--dark-blue: #2c3e50
 $c--light-blue: #34495e
 $c--gray: #bdc3c7
 $c--light-gray: #f3f7f8
+$c--red: #c0392b
 *
   box-sizing: border-box
 body
@@ -41,6 +42,8 @@ body
     font-size: 18px
   .inputfield
     position: relative
+    margin-bottom: 50px
+    margin-top: 60px
     input
       height: 70px
       background-color: transparent
@@ -74,3 +77,17 @@ body
         padding: 25px 16px 25px 20px
         background-color: $c--light-gray
         color: $c--gray
+
+.search--item
+  color: $c--light-blue
+  text-decoration: none
+  text-indent: 30px
+  position: relative
+  font-size: 18px
+  &:hover
+    p
+      color: $c--red
+  &::before
+    content: "•"
+    position: absolute
+    left: -15px

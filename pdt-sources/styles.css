@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -38,7 +39,9 @@ body {
     padding-top: 30px;
     font-size: 18px; }
   #container .inputfield {
-    position: relative; }
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 60px; }
     #container .inputfield input {
       height: 70px;
       background-color: transparent;
@@ -70,3 +73,16 @@ body {
         padding: 25px 16px 25px 20px;
         background-color: #f3f7f8;
         color: #bdc3c7; }
+
+.search--item {
+  color: #34495e;
+  text-decoration: none;
+  text-indent: 30px;
+  position: relative;
+  font-size: 18px; }
+  .search--item:hover p {
+    color: #c0392b; }
+  .search--item::before {
+    content: "•";
+    position: absolute;
+    left: -15px; }
