@@ -101,7 +101,6 @@
 		$ = ctx;
 		canvasBody.width = w;
 		canvasBody.height = h;
-		document.body.style["overflow"] = "hidden"
 		return [el, ctx];
 	}
 	function drawBg() {

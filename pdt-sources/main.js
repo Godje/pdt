@@ -3,7 +3,7 @@ var items = [
 		["[#3] Крутая Кнопка Меню CSS/JS | Крутой UI", "https://github.com/Godje/ready-to-go-frontend-kit/tree/Cool-UI-%233"],
 		["[#4] Прогресс Скроллинга страницы | Крутой UI", "https://github.com/Godje/ready-to-go-frontend-kit/tree/Cool-UI-%234"],
 		["[#5] Слежение ввода | Крутой UI Tutorial", "https://github.com/Godje/ready-to-go-frontend-kit/tree/Cool-UI-%235"],
-		["[#6] Проверка наличия ввода | Крутой UI Tutorial", "https://jsfiddle.net/Godje/yjvgfzux/"]
+		["[#6] Проверка наличия ввода | Крутой UI Tutorial", "https://jsfiddle.net/Godje/yjvgfzux/"],
 		["[Canvas] Как сделать классную анимацию для фона в Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-animation__1"],
 		["[Canvas] Как сделать рисование в Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-drawing"],
 		["[Canvas] Как сделать Pixel Art в Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-pixel-art"],
