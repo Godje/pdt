@@ -12,7 +12,7 @@
 			piDeg = pi/180,
 			particles = [],
 			canvasStyles = {
-				position: "absolute",
+				position: "fixed",
 				top: "0px",
 				left: "0px",
 				"background-color": "#222",

@@ -12,12 +12,19 @@ var items = [
 		['[Canvas] Как создать "Цветной Хаос" в канвасе', "https://github.com/Godje/pdt/tree/master/pdt-sources/vector--color-chaos"],
 		["[Canvas] Как сделать анимацию живых линий в HTML5 Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-living-lines"],
 	],
-	parent = document.getElementById("search--field"),
-	input = document.getElementById("search--input");
+	parent = $("#search--field"),
+	input = $("#search--input");
 
-renderItems(items, parent)
-input.addEventListener("input", function(e) {
-	const val = e.target.value.toLowerCase();
+renderItems(items, parent);
+fixHeight();
+
+function fixHeight(){
+	input.val("");
+	let topOff = parent.children().last().offset().top;
+	$("body").css("min-height", topOff+"px");
+}
+input.on("input", function(e) {
+	const val = $(this).val().toLowerCase();
 	if (val !== "") {
 		let newArr = items.filter(function(e) {
 			return e[0].toLowerCase().match(val);
@@ -27,15 +34,18 @@ input.addEventListener("input", function(e) {
 		renderItems(items, parent)
 	}
 });
-
 function renderItems(arr, parent) {
-	parent.innerHTML = "";
+	parent.html("");
 	for (var i = 0; i < arr.length; i++) {
 		let el = document.createElement("a");
 		el.className = "search--item";
 		el.href = arr[i][1];
 		el.target = "_blank"
 		el.innerHTML = "<p>" + arr[i][0] + "</p>"
-		parent.appendChild(el);
+		parent.append(el);
 	}
 }
+window.addEventListener("resize", function(){
+	renderItems(items, parent);
+	fixHeight();
+});

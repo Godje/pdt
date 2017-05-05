@@ -8,7 +8,7 @@ body {
   height: auto;
   background-color: #f3f7f8;
   color: #34495e;
-  overflow: auto;
+  overflow-x: hidden;
   padding: 0;
   margin: 0; }
   body h1 {
