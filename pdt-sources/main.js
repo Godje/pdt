@@ -24,24 +24,26 @@ function fixHeight(){
 	$("body").css("min-height", topOff+"px");
 }
 input.on("input", function(e) {
-	const val = $(this).val().toLowerCase();
+	const val = $(this).val();
 	if (val !== "") {
 		let newArr = items.filter(function(e) {
-			return e[0].toLowerCase().match(val);
+			return e[0].toLowerCase().match(val.toLowerCase());
 		});
-		renderItems(newArr, parent);
+		renderItems(newArr, parent, val);
 	} else {
 		renderItems(items, parent)
 	}
 });
+
 function renderItems(arr, parent) {
 	parent.html("");
 	for (var i = 0; i < arr.length; i++) {
-		let el = document.createElement("a");
+		let el = document.createElement("a"),
+        str = arr[i][0];
 		el.className = "search--item";
 		el.href = arr[i][1];
 		el.target = "_blank"
-		el.innerHTML = "<p>" + arr[i][0] + "</p>"
+		el.innerHTML = "<p>" + str + "</p>"
 		parent.append(el);
 	}
 }

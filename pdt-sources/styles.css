@@ -3,6 +3,7 @@
   box-sizing: border-box; }
 
 body {
+  display: block;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   height: auto;
@@ -10,7 +11,8 @@ body {
   color: #34495e;
   overflow-x: hidden;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding-bottom: 120px; }
   body h1 {
     line-height: 100%; }
 
