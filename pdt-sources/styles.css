@@ -5,9 +5,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-  height: 100vh;
+  height: auto;
   background-color: #f3f7f8;
   color: #34495e;
+  overflow-x: hidden;
   padding: 0;
   margin: 0; }
   body h1 {
