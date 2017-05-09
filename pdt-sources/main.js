@@ -11,6 +11,7 @@ var items = [
 		["[Canvas] Как создать преследующие частицы в HTML5 Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/vector--pursuers"],
 		['[Canvas] Как создать "Цветной Хаос" в канвасе', "https://github.com/Godje/pdt/tree/master/pdt-sources/vector--color-chaos"],
 		["[Canvas] Как сделать анимацию живых линий в HTML5 Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-living-lines"],
+		["[JS] Фильтр Массивов в JavaScript ","https://github.com/Godje/pdt/tree/master/pdt-sources/array-filter"],
 	],
 	parent = $("#search--field"),
 	input = $("#search--input");
