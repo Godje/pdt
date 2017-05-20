@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background: -webkit-linear-gradient(35deg, #64b3f4, #c2e59c);
+  background: -o-linear-gradient(35deg, #64b3f4, #c2e59c);
+  background: linear-gradient(35deg, #64b3f4, #c2e59c); }
+
+#output {
+  color: white;
+  font-size: 72px;
+  font-family: sans-serif; }
+
+#slider {
+  position: absolute;
+  height: 8px;
+  top: calc(100% - 8px);
+  left: 0;
+  background-color: white;
+  width: 100%; }
