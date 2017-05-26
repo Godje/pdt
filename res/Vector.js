@@ -51,6 +51,11 @@ class Vector{
 
     return this;
   }
+  limit(a){
+		this.x > a ? this.x = a : void 0;
+		this.y > a ? this.y = a : void 0;
+		return this;
+  }
   mag(){
     let b = Math.sqrt(this.x*this.x + this.y*this.y)
     return b;
