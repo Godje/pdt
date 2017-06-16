@@ -12,6 +12,7 @@ var items = [
 		['[Canvas] Как создать "Цветной Хаос" в канвасе', "https://github.com/Godje/pdt/tree/master/pdt-sources/vector--color-chaos"],
 		["[Canvas] Как сделать анимацию живых линий в HTML5 Canvas", "https://github.com/Godje/pdt/tree/master/pdt-sources/canvas-living-lines"],
 		["[JS] Фильтр Массивов в JavaScript ","https://github.com/Godje/pdt/tree/master/pdt-sources/array-filter"],
+		["[JS] Как сделать простенький Таймер в JavaScript", "https://github.com/Godje/pdt/tree/master/pdt-sources/simple-timer"],
 	],
 	parent = $("#search--field"),
 	input = $("#search--input");
