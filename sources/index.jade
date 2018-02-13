@@ -1,0 +1,22 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title PDT Sources
+		link(rel="stylesheet", href="styles.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+	body
+		#container
+			h1 Исходные файлы
+			p.intro Здраствуй! На этом сайте храняться исходные файлы туториалов PaDamTuts на YouTube. Большинство исходников находяться в репозитории на сервисе GitHub, но тут вы можете найти ссылки на них (и на другие ресурсы если они не в репозитории). Также, если хотите улучшить этот вебсайт или посмотреть исходный код этого вебсайта, вы тоже можете найти их в репозитории - скомпилированный и исходный варианты.
+			.inputfield
+				input(placeholder="Введите название урока")#search--input
+				span.fa.fa-search
+			#search--field
+		script(src="vector.js")
+		script(src="canvas.js")
+		script(src="main.js")

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  height: auto;
+  background-color: #f3f7f8;
+  color: #34495e;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
+  body h1 {
+    line-height: 100%; }
+
+#container {
+  width: 90%;
+  max-width: 1100px;
+  padding: 60px 30px 0px 30px;
+  min-width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  @media (max-width: 540px) {
+    #container {
+      padding: 20px 5px; }
+      #container h1 {
+        font-size: 40px !important;
+        text-align: center;
+        text-indent: 0px; } }
+  #container h1 {
+    font-weight: 800;
+    font-size: 64px;
+    text-indent: 30px;
+    padding: 0;
+    margin: 0; }
+  #container p.intro {
+    font-weight: 400;
+    text-indent: 30px;
+    padding-top: 30px;
+    font-size: 18px; }
+  #container .inputfield {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 60px; }
+    #container .inputfield input {
+      height: 70px;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+      position: relative;
+      width: 100%;
+      min-width: 240px;
+      border-bottom: 2px solid #bdc3c7;
+      padding: 20px 0px;
+      text-indent: 60px;
+      font-size: 36px;
+      color: #34495e;
+      font-weight: 100; }
+      #container .inputfield input::-webkit-input-placeholder {
+        color: #bdc3c7; }
+      #container .inputfield input::-moz-placeholder {
+        color: #bdc3c7; }
+      #container .inputfield input:-ms-input-placeholder {
+        color: #bdc3c7; }
+      #container .inputfield input:-moz-placeholder {
+        color: #bdc3c7; }
+      #container .inputfield input + span {
+        position: absolute;
+        height: 0px;
+        font-size: 25px;
+        left: 0px;
+        top: 0px;
+        padding: 25px 16px 25px 20px;
+        background-color: #f3f7f8;
+        color: #bdc3c7; }
+
+.search--item {
+  color: #34495e;
+  text-decoration: none;
+  text-indent: 30px;
+  position: relative;
+  font-size: 18px; }
+  .search--item:hover p {
+    color: #c0392b; }
+  .search--item::before {
+    content: "•";
+    position: absolute;
+    left: -15px; }
