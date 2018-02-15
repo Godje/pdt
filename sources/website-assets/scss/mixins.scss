@@ -1,0 +1,13 @@
+$font-monospace: "Roboto Mono";
+$font-primary: "Roboto";
+
+$c-primary: black;
+
+@mixin font($font){
+	@if $font == "monospace" {
+		font-family: $font-monospace, monospace;
+	}
+	@if $font == "primary" {
+		font-family: $font-primary, sans-serif;
+	}
+}

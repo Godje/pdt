@@ -1,0 +1,22 @@
+{
+  "name": "source-website",
+  "version": "0.0.1",
+  "description": "A website for the sources of PaDamTuts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youtube",
+    "website",
+    "tool"
+  ],
+  "author": "Daniel Mayovskiy",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
