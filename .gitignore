@@ -48,4 +48,4 @@ Temporary Items
 .apdisk
 node_modules
 node_modules/
-/node_modules
+sources/node_modules/
