@@ -122,7 +122,7 @@ const Home = {
 				)
 			])
 		}
-		return { oninit, view}
+		return { oninit, view }
 	}
 }
 
