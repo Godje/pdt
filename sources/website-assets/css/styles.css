@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #fefefe;
+  font-family: "Roboto", sans-serif; }
+
+.container {
+  max-width: 810px;
+  width: 95%;
+  margin: 0 auto;
+  overflow: auto;
+  font-family: "Roboto", sans-serif; }
+  .container .title {
+    text-align: center;
+    margin: 20px 0px; }
+    .container .title h1 {
+      font-family: "Roboto Mono", monospace;
+      text-align: center;
+      font-size: 46px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 10px;
+      display: inline-block;
+      border: 10px solid black;
+      margin: 0 auto;
+      background-color: #fff; }
+  .container .subtitle {
+    text-align: center;
+    margin: 30px 0px; }
+    .container .subtitle h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0; }
+
+.search-container {
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: relative; }
+  .search-container form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    height: 100%; }
+    .search-container form input {
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      -webkit-transition: border-bottom 100ms ease-in-out;
+      transition: border-bottom 100ms ease-in-out; }
+      .search-container form input:focus {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.8); }
+
+.output {
+  width: calc(100% - 10px);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px; }
+  .output .output-block {
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 5px 0px;
+    -webkit-transition: max-height 200ms ease-in-out;
+    transition: max-height 200ms ease-in-out; }
+    .output .output-block.open {
+      max-height: 200px; }
+      .output .output-block.open button:after {
+        -webkit-transform: translate(5px, 5px) rotateZ(-90deg);
+        transform: translate(5px, 5px) rotateZ(-90deg); }
+  .output .content {
+    padding: 20px; }
+    .output .content a {
+      color: #DD2C00;
+      text-decoration: none; }
+      .output .content a:before {
+        content: "</>";
+        color: black;
+        padding-right: 10px; }
+  .output button.output-title {
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    color: black;
+    padding: 0px 15px; }
+    .output button.output-title:after {
+      content: "";
+      font-family: "Roboto Mono", monospace;
+      -webkit-transform: rotateZ(0deg);
+      transform: rotateZ(0deg);
+      font-weight: bolder;
+      float: right;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right: 10px solid black;
+      -webkit-transition: -webkit-transform 150ms ease-in-out;
+      transition: -webkit-transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out; }

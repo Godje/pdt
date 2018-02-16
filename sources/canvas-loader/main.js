@@ -18,7 +18,7 @@
       this.theta = 0;
     }
     update(){
-      this.theta+=.5;
+      this.theta+=.2;
 
       if(this.theta > pi2){
         this.theta = 0;
@@ -35,7 +35,7 @@
 				$.arc(w/2, h/2, opts.radius, this.theta, pi2)
 			: $.arc(w/2, h/2, opts.radius, 0, this.theta);
 
-			$.strokeStyle = "red";
+			$.strokeStyle = "white";
 			$.lineWidth = opts.thickness;
 			$.lineCap = "round";
 			$.stroke();
