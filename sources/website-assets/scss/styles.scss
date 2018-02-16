@@ -36,6 +36,38 @@ body {
 			background-color: #fff;
 		}
 	}
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 300px;
+		height: 40px;
+		margin: 0 auto;
+		list-style: none;
+		a {
+			text-decoration: none;
+			color: $c-primary;
+			font-weight: 500;
+			position: relative;
+			padding: 10px;
+		}
+		a:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $c-primary;
+		}
+		a:hover {
+			color: $c-secondary;
+			&:after {
+				background-color: $c-secondary;
+			}
+		}
+	}
 	.subtitle {
 		text-align: center;
 		margin: 30px 0px;
@@ -119,6 +151,12 @@ body {
 		outline: 0;
 		color: $c-primary;
 		padding: 0px 15px;
+		transition: background-color 50ms ease-in-out, color 50ms ease-in-out;
+		&:hover {
+			cursor: pointer;
+			color: $c-secondary;
+			background-color: transparentize($c-secondary, 0.95);
+		}
 		&:after {
 			content: "";
 			@include font("monospace");

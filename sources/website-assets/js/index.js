@@ -12,14 +12,7 @@ const MODEL = {
 	},
 	sources: {
 		sourceList: m.stream([
-			{
-				name: "Github",
-				url: "https://github.com/Godje"
-			},
-			{
-				name: "YouTube",
-				url: "https://youtube.com/TheComePot"
-			}
+			
 		]),
 	sourceMatches: null	}
 }
@@ -53,6 +46,20 @@ const CTRL = {
 //
 // Doing the Views. 
 const Home = {
+	navLinks: [
+		{
+			name: "Github",
+			url: "https://github.com/Godje/pdt"
+		},
+		{
+			name : "YouTube",
+			url: "https://www.youtube.com/channel/UCzKW1gIGnerPbsZD-C2QNpA"
+		},
+		{
+			name: "VK",
+			url: "https://vk.com/padamtuts"
+		}
+	],
 	mainNode: (vnode)=>{
 		function view(vnode){
 			let sourceOutput = MODEL.sources.sourceMatches().map(function (source){
@@ -61,12 +68,24 @@ const Home = {
 			})
 			return m(".container", [
 				m(".title", m("h1", "PaDamTuts")),
+				m(Home.navNode),
 				m(".subtitle", m("h2", "Исходники")),
 				m(Home.inputNode),
 				m(".output", sourceOutput)
 			]);
 		}
 		return {view: view}
+	},
+	navNode: (vnode)=>{
+		function view(vnode){
+			return m("nav", Home.navLinks.map(function (link){
+				return m("li", m("a", {
+					href: link.url,
+					target: "_blank"
+				}, link.name))
+			}))
+		}
+		return {view}
 	},
 	inputNode: (vnode)=>{
 		function view(vnode){
