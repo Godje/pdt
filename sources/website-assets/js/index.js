@@ -56,7 +56,6 @@ const Home = {
 	mainNode: (vnode)=>{
 		function view(vnode){
 			let sourceOutput = MODEL.sources.sourceMatches().map(function (source){
-				console.log(source)
 				let {name, url} = source;
 				return m(Home.sourceNode, {name, url});
 			})
@@ -84,13 +83,27 @@ const Home = {
 		return {view: view}
 	},
 	sourceNode: (vnode)=>{
+		function oninit(vnode){
+			this.open = false;
+			let $this = this;
+			this.CTRL = {
+				toggleExpand: function (e){
+					e.preventDefault();
+					$this.open = !$this.open;
+				}
+			}
+		}
 		function view(vnode){
-			return m(".output-block", [
-				m("button.output-title", vnode.attrs.name),
-				m(`a[href=${vnode.attrs.url}]`, vnode.attrs.url)
+			return m(`div.output-block${ this.open ? ".open":"" }`, [
+				m("button.output-title", { onclick: this.CTRL.toggleExpand }, vnode.attrs.name),
+				m(".content",
+					m(`a[href="${vnode.attrs.url}"]`, {
+						target: "_blank"
+					}, vnode.attrs.url)
+				)
 			])
 		}
-		return {view}
+		return { oninit, view}
 	}
 }
 

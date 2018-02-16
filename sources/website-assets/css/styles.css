@@ -26,7 +26,8 @@ body {
       padding: 10px;
       display: inline-block;
       border: 10px solid black;
-      margin: 0 auto; }
+      margin: 0 auto;
+      background-color: #fff; }
   .container .subtitle {
     text-align: center;
     margin: 30px 0px; }
@@ -66,13 +67,30 @@ body {
   margin-top: 20px; }
   .output .output-block {
     width: 100%;
-    height: 50px;
+    height: auto;
+    max-height: 50px;
     display: block;
     position: relative;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.05);
-    margin: 5px 0px; }
-  .output .output-title {
+    margin: 5px 0px;
+    -webkit-transition: max-height 200ms ease-in-out;
+    transition: max-height 200ms ease-in-out; }
+    .output .output-block.open {
+      max-height: 200px; }
+      .output .output-block.open button:after {
+        -webkit-transform: translate(5px, 5px) rotateZ(-90deg);
+        transform: translate(5px, 5px) rotateZ(-90deg); }
+  .output .content {
+    padding: 20px; }
+    .output .content a {
+      color: #DD2C00;
+      text-decoration: none; }
+      .output .content a:before {
+        content: "</>";
+        color: black;
+        padding-right: 10px; }
+  .output button.output-title {
     width: 100%;
     height: 50px;
     display: block;
@@ -83,3 +101,18 @@ body {
     outline: 0;
     color: black;
     padding: 0px 15px; }
+    .output button.output-title:after {
+      content: "";
+      font-family: "Roboto Mono", monospace;
+      -webkit-transform: rotateZ(0deg);
+      transform: rotateZ(0deg);
+      font-weight: bolder;
+      float: right;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right: 10px solid black;
+      -webkit-transition: -webkit-transform 150ms ease-in-out;
+      transition: -webkit-transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out;
+      transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out; }

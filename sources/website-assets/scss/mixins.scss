@@ -2,6 +2,7 @@ $font-monospace: "Roboto Mono";
 $font-primary: "Roboto";
 
 $c-primary: black;
+$c-secondary: #DD2C00;
 
 @mixin font($font){
 	@if $font == "monospace" {
