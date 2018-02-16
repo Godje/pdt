@@ -7,6 +7,10 @@ $color-secondary: #e67e22;
 	box-sizing: border-box;
 }
 
+html { // fix suggested by Anton Grishin. No scroll-jump, while scroll appears.
+	margin-left: calc(100vw - 100%);
+}
+
 body {
 	margin: 0;
 	background-color: #fefefe;
