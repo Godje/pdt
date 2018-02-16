@@ -136,6 +136,7 @@ body {
 			&:before {
 				content: "</>";
 				color: $c-primary;
+				font-weight: bold;
 				padding-right: 10px;
 			}
 		}

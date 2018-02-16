@@ -124,6 +124,7 @@ body {
       .output .content a:before {
         content: "</>";
         color: black;
+        font-weight: bold;
         padding-right: 10px; }
   .output button.output-title {
     width: 100%;
