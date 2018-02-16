@@ -69,7 +69,7 @@ const Home = {
 			return m(".container", [
 				m(".title", m("h1", "PaDamTuts")),
 				m(Home.navNode),
-				m(".subtitle", m("h2", "Исходники")),
+				m(".subtitle", m("h2", "Файлы с видео-уроков")),
 				m(Home.inputNode),
 				m(".output", sourceOutput)
 			]);
