@@ -1,0 +1,53 @@
+#preloader
+  width: 100vw
+  height: 100vh
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: fixed
+  z-index: 200
+
+  background-color: $fl-red
+  pointer-events: none
+
+  .text
+    color: lighten($fl-lred, 10%)
+    text-transform: uppercase
+    font-size: 30px
+    margin-bottom: 25px
+
+    animation: -1s textBlink 1.2s infinite linear
+
+  #circle
+    width: 1px
+    height: 1px
+
+    display: block
+    position: relative
+
+    background-color: $fl-red
+
+    border-radius: 50%
+    border:
+      top: 99px $fl-lred solid
+      left: 99px $fl-red solid
+      right: 99px $fl-red solid
+      bottom: 99px $fl-lred solid
+
+    animation: -1s preloaderRotation 1.5s infinite linear
+
+@keyframes preloaderRotation
+  from
+    transform: rotateZ(0deg)
+  to
+    transform: rotateZ(360deg)
+
+@keyframes textBlink
+  0%
+    color: lighten($fl-lred, 10%)
+  50%
+    color: transparent
+  100%
+    color: lighten($fl-lred, 10%)
