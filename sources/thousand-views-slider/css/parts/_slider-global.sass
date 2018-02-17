@@ -1,0 +1,87 @@
+#slider
+  width: 100vw
+  height: 100vh
+
+  position: relative
+  display: block
+  z-index: 1
+
+  background-color: #1e1e1e
+
+  padding: 0
+  margin: 0
+
+#btn-left, #btn-right
+  width: 50px
+  height: 50px
+
+  position: absolute
+  top: 0
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  z-index: 40
+
+  color: white
+  font-size: 50px
+  cursor: pointer
+
+  background-color: rgba(0,0,0,0.5)
+  border-radius: 50%
+
+  &::selection
+    background-color: transparent
+
+  &:active
+    transform: translateY(-48%) scale(0.97)
+
+#btn-left
+  top: 50%
+  left: 20px
+  transform: translateY(-50%)
+
+#btn-right
+  top: 50%
+  right: 20px
+  transform: translateY(-50%)
+
+.slide-el
+  width: 100vw
+  height: 100vh
+
+  position: absolute
+  display: block
+
+  z-index: 1
+
+  //transform: translateX(100%)
+
+  &.opened
+    transform: translateX(0%)
+
+    .slide-block
+      left: 0
+
+      img
+        opacity: 1
+
+  .slide-block
+    position: absolute
+    overflow: hidden
+    background-color: #1e1e1e
+    left: 100%
+
+    img
+      min-height: 100vh
+      max-height: 100vh
+
+      position: relative
+      display: block
+
+      left: 50%
+      transform: translateX(-50%)
+
+      opacity: 1
