@@ -1,0 +1,52 @@
+#nav-btn
+  width: 60px
+  height: 60px
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  position: relative
+
+  background-color: #222
+  border-radius: 50%
+  cursor: pointer
+
+  #nav-img
+    width: 35px
+    height: 2px
+
+    background-color: #fff
+    display: block
+    position: relative
+    transition: background-color 0.25s
+
+    &::after, &::before
+      content: ""
+      display: block
+      position: absolute
+
+      height: 2px
+      width: 35px
+      background-color: #fff
+
+      transition: top 0.25s, transform 0.35s
+
+    &::after
+      top: 10px
+      left: 0
+    &::before
+      top: -10px
+      left: 0
+
+  &.active
+    #nav-img
+      background-color: transparent
+
+      &::after
+        top: 0px
+        transform: rotateZ(45deg)
+      &::before
+        top: 0px
+        transform: rotateZ(-45deg)
