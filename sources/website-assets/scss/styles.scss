@@ -137,6 +137,7 @@ body {
 		a {
 			color: $c-secondary;
 			text-decoration: none;
+			transition-delay: display 200ms;
 			&:before {
 				content: "</>";
 				color: $c-primary;
