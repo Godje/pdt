@@ -11,10 +11,9 @@ const MODEL = {
 		inputField: m.stream(""),
 	},
 	sources: {
-		sourceList: m.stream([
-			
-		]),
-	sourceMatches: null	}
+		sourceList: m.stream([]),
+		sourceMatches: null,
+	}
 }
 
 // This stream combines two streams of inputValue and sourceList making it easier for me to auto-update information based on input
